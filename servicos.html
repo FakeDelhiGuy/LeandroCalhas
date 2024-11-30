@@ -12,7 +12,7 @@
         <div class="container">
             <!-- Logo inserida -->
             <div class="logo">
-                <img src="img/logo.png" alt="Logo Calhas e Estruturas Metálicas" style="height: 60px;">
+                <a href="index.html"><img src="img/logo.png" alt="Logo Calhas e Estruturas Metálicas" style="height: 60px;"></a>
             </div>
             <!-- Botão do menu hambúrguer -->
             <div class="menu-hamburguer" id="menu-hamburguer">
@@ -32,42 +32,32 @@
         </div>
     </header>
 
-    <!-- Seção Hero -->
-    <section id="hero" class="hero">
-        <div class="hero-text">
-            <h2>Bem-vindo à Calhas e Estruturas Metálicas</h2>
-            <p>Especialistas em calhas, rufos e estruturas metálicas personalizadas.</p>
-            <div class="cta-buttons">
-                <a href="#contato" class="btn primary">Fale Conosco</a>
-                <a href="#servicos" class="btn secondary">Saiba Mais</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Sobre -->
-    <section id="sobre" class="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Com mais de 3 anos de experiência no mercado, somos referência em soluções de qualidade para calhas e estruturas metálicas. Nossa missão é garantir a satisfação dos clientes com serviços confiáveis e duradouros.</p>
-    </section>
-
     <!-- Seção Serviços -->
     <section id="servicos" class="servicos">
         <h2>Nossos Serviços</h2>
         <div class="cards">
             <div class="card">
                 <h3>Instalação de Calhas</h3>
+                <img src="img/1.jpg" alt="Calha Instalada" class="clickable-image" onclick="openFullScreen(this)">
                 <p>Projetos sob medida para diferentes tipos de construção.</p>
             </div>
             <div class="card">
                 <h3>Rufos Personalizados</h3>
+                <img src="img/2.png" alt="Rufos" class="clickable-image" onclick="openFullScreen(this)">
                 <p>Acabamento perfeito e proteção para sua obra.</p>
             </div>
             <div class="card">
                 <h3>Estruturas Metálicas</h3>
+                <img src="img/3.jpg" alt="Estruturas Metálicas" class="clickable-image" onclick="openFullScreen(this)">
                 <p>Fabricação e montagem com alto padrão de qualidade.</p>
             </div>
         </div>
     </section>
+    
+    <div id="fullscreen" class="fullscreen" onclick="closeFullScreen()">
+        <img id="fullscreen-img" src="" alt="Imagem Ampliada">
+    </div>
+    
 
     <!-- Seção Contato -->
     <section id="contato" class="contato">
@@ -75,7 +65,7 @@
         <div class="card-whatsapp">
             <h3>Entre em contato agora pelo WhatsApp</h3>
             <p>Estamos à disposição para tirar suas dúvidas e realizar orçamentos.</p>
-            <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20de%20calhas%20e%20estruturas%20metálicas."
+            <a href="https://wa.me/554197811581"
                class="btn whatsapp">Falar no WhatsApp</a>
         </div>
     </section>
