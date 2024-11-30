@@ -1,0 +1,300 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+html {
+    font-size: 16px; /* Base ideal para escala */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabeçalho e Menu */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Menu de navegação */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #e53935;
+}
+
+/* Botão de menu hambúrguer */
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-hamburguer .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: url('img/main.jpg') no-repeat center center/cover;
+    border-bottom: 5px solid #e53935;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: bolder;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cta-buttons .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-buttons .btn.primary {
+    background: #e53935;
+    color: #fff;
+}
+
+.cta-buttons .btn.primary:hover {
+    background: #fff;
+    color: #e53935;
+    border: 1px solid #e53935;
+}
+
+.cta-buttons .btn.secondary {
+    background: #333;
+    color: #fff;
+}
+
+.cta-buttons .btn.secondary:hover {
+    background: #555;
+}
+
+/* Sobre e Serviços */
+.sobre, .servicos {
+    padding: 50px 15px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e53935;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    flex: 1 1 calc(100% - 40px);
+    border: 2px solid #e53935;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p {
+    color: #ccc;
+}
+
+/* Contato */
+.contato {
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.card-whatsapp {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Responsividade */
+/* Telas pequenas */
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu ul li a {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .card {
+        
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        flex: 1 1 100%;
+            .card {
+        
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        flex: 1 1 100%;
+        background-color: rgba(34, 34, 34, 0.5);
+        
+    
+    }
+}
+
+/* Telas médias */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+/* Telas grandes e alta resolução */
+@media (min-width: 1201px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        gap: 30px;
+    }
+
+    .card {
+        flex: 1 1 calc(33.33% - 40px);
+    }
+}
+}
